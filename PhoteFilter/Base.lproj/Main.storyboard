@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hjK-Tj-mSM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PhoteFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0657.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-fI-Qr0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Hn-fI-Qr0" firstAttribute="leading" secondItem="jyV-Pf-zRb" secondAttribute="leading" id="1ql-oa-Av7"/>
+                            <constraint firstItem="0Hn-fI-Qr0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Cw3-Gp-N6Y"/>
+                            <constraint firstAttribute="bottom" secondItem="0Hn-fI-Qr0" secondAttribute="bottom" id="LK7-Rv-VKb"/>
+                            <constraint firstItem="0Hn-fI-Qr0" firstAttribute="trailing" secondItem="jyV-Pf-zRb" secondAttribute="trailing" id="qxF-Uv-vtp"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jkn-jY-bgT"/>
+                        <barButtonItem title="apply Filter" id="Ijn-9a-gTR">
+                            <connections>
+                                <action selector="applyFilter:" destination="vXZ-lx-hvc" id="EmU-tv-NYU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jga-po-MP5"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Filter" id="lSq-q2-HK6"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="0Hn-fI-Qr0" id="TGB-2i-WxR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fr7-4x-eEL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hjK-Tj-mSM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i7N-gQ-pos">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LBP-vr-ZgH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="fru-hv-eaf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yt6-EV-dNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-557"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0657.png" width="640" height="1136"/>
+    </resources>
+</document>
